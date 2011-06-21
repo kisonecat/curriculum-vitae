@@ -1,0 +1,89 @@
+<div id="sidecolumn">
+  <div class="messageBox">
+    <a href="cv.pdf">
+    <img src="cv.png" width="100%"/>
+    <div class="caption">Download a PDF version of my CV.</div></a>
+  </div>
+</div>
+
+<div id="content">
+
+<h2>Curriculum Vitae</h2>
+
+<%
+$result = ""
+def mputs(x)
+  $result = $result + "\n" + x
+end
+
+class String
+  def clean
+    self.gsub(/\\textit\{([^\}]+)\}/, '<i>\1</i>').gsub( '--', '&ndash;' ).gsub( '---', '&mdash;' ).gsub('$\mathcal B$', '<i>B</i>' ).gsub('$L^2$', 'L<sup>2</sup>' ).gsub('\\geq', '&ge;').gsub('$\\alpha$', '&alpha;' ).gsub( /\$([^$])\$/, '<i>\1</i>' ).gsub( /\$([^$]+)\$/, '\1' ).gsub('~','&nbsp;').gsub( '\\\\', '<br/>' ).gsub(/\\mathbb\{([^\}]+)\}/, '<b>\1</b>').gsub( '^n', '<sup><i>n</i></sup>' ).gsub( '\\\'e', '&eacute;' )
+  end
+end
+
+def section(title)
+  mputs "<h3>#{title}</h3>".clean
+end
+
+def flavor(text)
+  mputs "<div class=\"description\">#{text}</div>".clean
+end
+
+def text_with_time( text, timeperiod )
+  if timeperiod.is_a?(Array)
+    timeperiod = timeperiod.join('<br/>')
+  end
+
+  mputs "<div class=\"cvitem\">".clean
+  mputs "  <div class=\"cvtext\">#{text}</div>".clean
+  mputs "  <div class=\"cvtime\">#{timeperiod}</div>".clean
+  mputs "</div>".clean
+end
+
+def event_place_time(event,place,timeperiod)
+  text_with_time("<div class=\"event\">#{event}</div><div class=\"place\">#{place}</div>",timeperiod)
+end
+
+def degree(degree)
+  flavor(degree)
+end
+
+def link(href,text)
+  "<a href=\"#{href}\">#{text}</a>"
+end
+
+def teaching(place,thing,timeperiod)
+  text_with_time( "#{place}, #{thing}", timeperiod)
+end
+
+def award(text,timeperiod)
+  text_with_time(text,timeperiod)
+end
+
+def conference_talk(title,conference,website,place,timeperiod)
+  event_place_time(title,link(website,conference) + '<br/>' + place, timeperiod)
+end
+
+def school(school, location, timeperiod)
+  event_place_time(school,location,timeperiod)
+end
+
+def attended(website,conference,place,timeperiod)
+  event_place_time("<a href=\"#{website}\">#{conference}</a>", place, timeperiod)
+end
+
+def local_talk(title,seminar,timeperiod)
+  event_place_time(title, seminar, timeperiod)
+end
+
+def service(text,timeperiod)
+  text_with_time(text,timeperiod)
+end
+
+load('cv/cv.rb')
+%>
+<%= $result %>
+
+</div>
+

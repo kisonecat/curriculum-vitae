@@ -1,0 +1,120 @@
+\documentclass[12pt]{article}
+
+%\usepackage{bbm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage[pdftitle={Jim Fowler - Curriculum Vitae},pdfauthor={Jim Fowler},colorlinks=false]{hyperref} 
+\usepackage[left=2cm,top=2cm,right=2cm,nohead,nofoot]{geometry}
+\pagestyle{empty}
+
+\setlength{\parindent}{0pt}
+
+\newcommand*\myhrulefill{%
+\leavevmode\leaders\hrule depth -3.5pt height 5.5pt\hfill\kern0pt%
+}
+
+\begin{document}
+
+\newcommand{\mydot}{\,\,\bull\,\,}
+
+\noindent\parbox[c]{2.5in}{{\Huge\textbf{\textsf{Jim Fowler}}} \\
+{\textsf{Curriculum Vitae}}}
+\newlength{\widest}
+\def\bull{\vrule height 1ex width .5ex depth -.5ex }
+\settowidth{\widest}{The Ohio State University\mydot Department of Mathematics}
+\hfill
+\parbox[c]{\widest}{The Ohio State University\mydot Department of Mathematics \\
+231 West 18th Ave Columbus, Ohio 43210 \vspace{1ex}\\
+Telephone: (773) 573--5659 \\
+Email: \href{mailto:fowler@math.osu.edu}{\texttt{fowler@math.osu.edu}} \\
+Web: \url{http://www.math.osu.edu/~fowler/}}
+
+<%
+$result = ""
+def mputs(x)
+  $result = $result + "\n" + x
+end
+
+class String
+  def clean
+    self
+  end
+end
+
+def section(title)
+#  mputs "\\section*{\\makebox[0cm][r]{\\makebox[1cm][r]{\\myhrulefill}}\\bf\\sf #{title} \\myhrulefill}".clean
+  mputs ("\\section*{\\textsf{\\textbf{#{title}}} \\myhrulefill}".clean)
+#  mputs "\\hspace{-0.05\\textwidth}\\parbox{1.1\\textwidth}{\\section*{\\bf\\sf \\makebox[0.05\\textwidth]{\\myhrulefill\\hspace{4pt}}#{title}\\hspace{4pt}\\myhrulefill}}".clean
+end
+
+def flavor(text)
+#  mputs "\\vspace{-1.5ex}\\noindent{\\footnotesize #{text}}".clean
+#  mputs "{\\footnotesize #{text}}"
+#  mputs
+  
+  mputs ("\\vspace{-1.5ex}%")
+  mputs ("\\hspace{0.05\\textwidth}\\parbox{0.95\\textwidth}{\\small #{text}}%")
+  mputs ("\\vspace{2ex}")
+  mputs ""
+end
+
+def text_with_time( text, timeperiod )
+  if timeperiod.is_a?(Array)
+    timeperiod = timeperiod.join('\\\\\\null\\hfill ')
+  end
+
+
+  mputs "\\parbox[t]{0.75\\textwidth}{#{text}}\\parbox[t]{0.25\\textwidth}{\\hfill #{timeperiod}}\\vspace{2ex}".clean
+  mputs ""
+
+#  mputs "\\vspace{1ex}\\noindent{\\parbox[t]{0.75\\textwidth}{#{text}}}{\\parbox[t]{0.25\\textwidth}{\\hfill #{timeperiod}}}\\vspace{1.5ex}".clean
+#  mputs  "\\subsubsection*{\\rm\\parbox[t]{0.75\\textwidth}{#{text}}{\\parbox[t]{0.25\\textwidth}{\\noindent\\hfill #{timeperiod}}}}".clean
+end
+
+def event_place_time(event,place,timeperiod)
+  text_with_time("{#{event} \\\\ {\\raisebox{0.8ex}{\\parbox{0.75\\textwidth}{\\footnotesize #{place}}}}}", timeperiod)
+end
+
+def degree(degree)
+  flavor(degree)
+end
+
+def link(href,text)
+  "\\href{#{href}}{#{text}}"
+end
+
+def teaching(place,thing,timeperiod)
+  text_with_time( "#{place}, #{thing}", timeperiod)
+end
+
+def award(text,timeperiod)
+  text_with_time(text,timeperiod)
+end
+
+def conference_talk(title,conference,website,place,timeperiod)
+  event_place_time(title,link(website,conference) + '\\\\' + place, timeperiod)
+end
+
+def school(school, location, timeperiod)
+  event_place_time(school,location,timeperiod)
+end
+
+def attended(website,conference,place,timeperiod)
+  event_place_time(link(website,conference), place, timeperiod)
+end
+
+def local_talk(title,seminar,timeperiod)
+  event_place_time(title, seminar, timeperiod)
+end
+
+def service(text,timeperiod)
+  text_with_time(text,timeperiod)
+end
+
+load('cv/cv.rb')
+%>
+
+<%= $result %>
+
+\end{document}
