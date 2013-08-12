@@ -11,21 +11,30 @@ school('Harvard University', 'Cambridge, Massachusetts','1999--2003')
 degree('A.B. in Mathematics, \textit{summa cum laude}, June 2003.\\\\ Junior Phi Beta Kappa.')
 
 ################################################################
-section('Teaching')
+section('Employment')
 
-teaching('The Ohio State University', 'Zassenhaus Assistant Professor', '2009--present')
+teaching('The Ohio State University', 'Lecturer', '2012--2013')
 
-flavor('Mathematics 153: Calculus and Analytic Geometry III. \\\\' +
-'Mathematics 254: Calculus and Analytic Geometry IV. \\\\' + 
+flavor('Mathematics 1151: Calculus I. \\\\' +
+'Mathematics 1161: Accelerated Calculus I. \\\\' +
+'Mathematics 1181: Honors Calculus I.'
+)
+
+teaching('The Ohio State University', 'Zassenhaus Assistant Professor', '2009--2012')
+
+flavor('Mathematics 151: Calculus and Analytic Geometry I. \\\\' +
+'Mathematics 153: Calculus and Analytic Geometry III. \\\\' +
+'Mathematics 254 and 254.02: Calculus and Analytic Geometry IV. \\\\' + 
 'Mathematics 660: Introductory Complex Analysis. \\\\' + 
 'Mathematics 953: Topics in Topology \\\\' + 
 'Mathematics 345: Foundations of Higher Mathematics \\\\' + 
+'Mathematics 758: Algebraic Topology: Cohomology \\\\' + 
 'Mathematics 765: Smooth Manifolds'
 )
 
-teaching('The Ohio State University', 'Ross Mathematics Program', ['Summer 2011','Summer 2010'])
+teaching('The Ohio State University', 'Ross Mathematics Program', 'Summer 2010--2012')
 
-flavor('Held a number theory recitation for high school students; taught a piecewise-linear topology course for undergraduate and high school students.')
+flavor('Ran a number theory recitation for high school students; taught a piecewise-linear topology course for undergraduate and high school students.')
 
 teaching('University of Chicago',link('http://www.math.uchicago.edu/~drp/','Directed Reading Program') + ', Mentor', '2004--2009')
 
@@ -106,34 +115,31 @@ award(link('http://isites.harvard.edu/icb/icb.do?keyword=k1985&pageid=icb.page29
 #group actions on manifolds.')
 
 ################################################################
-section('Invited talks')
-
-local_talk('Projective Planes',
-'OSU Radical Pi',
-'April 20, 2011')
-
-local_talk('CAT(0) square complexes',
-'OSU Math Circle',
-'April 17, 2011')
-
-local_talk('$\mathcal B$-bounded finiteness',
-'University of Michigan',
-'March 31, 2011')
-
-local_talk('Rational Poincar\\\'e duality and controlled symmetric signature',
-'Notre Dame',
-'March 4, 2010')
-
-local_talk('Dividing a square into triangles of equal-area',
-'OSU Radical Pi',
-'January 13, 2010')
-
-################################################################
-section('Conference talks')
+section('Invited conference talks')
 
 #\newcommand{\conferencetalk}[3]{\subsubsection*{\textbf{#1}}#2\hfill{#3}}
 
 #\conferencetalk{\href{http://www.msri.org/calendar/workshops/WorkshopInfo/469/show_workshop}%
+
+conference_talk('Manifolds realizing rational homotopy types',
+'AMS Special Session on Interactions Between Geometry and Topology',
+'http://www.ams.org/meetings/sectional/2201_progfull.html',
+'AMS Fall Central Sectional Meeting','October 20--21, 2012')
+
+conference_talk('Rational projective planes',
+'Spring Topology and Dynamics Conference',
+'http://www.matem.unam.mx/STDC2012/',
+'Universidad Nacional Autonoma de M\\\'xico','March 22--24, 2012')
+
+conference_talk('Poincar\\\'e duality groups',
+'Stratified Spaces: Joining Analysis, Topology and Geometry',
+'http://www.mfo.de/occasion/1150',
+'Mathematisches Forschungsinstitut Oberwolfach','December 11--17, 2011')
+
+conference_talk('Weighted algebraic topology',
+'Geometrical methods in high-dimensional topology',
+'http://www.math.osu.edu/~lafont.1/HighDimTopConf.html',
+'The Ohio State University','May 16--21, 2011')
 
 conference_talk('$\mathcal B$-bounded finiteness',
 'Spring Topology and Dynamics Conference',
@@ -159,6 +165,29 @@ conference_talk('Lattices with torsion and rational homology manifolds',
 'Topology of Stratified Spaces',
 'http://www.msri.org/calendar/workshops/WorkshopInfo/469/show_workshop',
 'Mathematical Sciences Research Institute','September 8--12, 2008')
+
+################################################################
+section('Invited seminar talks')
+
+local_talk('Projective Planes',
+'OSU Radical Pi',
+'April 20, 2011')
+
+local_talk('CAT(0) square complexes',
+'OSU Math Circle',
+'April 17, 2011')
+
+local_talk('$\mathcal B$-bounded finiteness',
+'University of Michigan',
+'March 31, 2011')
+
+local_talk('Rational Poincar\\\'e duality and controlled symmetric signature',
+'Notre Dame',
+'March 4, 2010')
+
+local_talk('Dividing a square into triangles of equal-area',
+'OSU Radical Pi',
+'January 13, 2010')
 
 ################################################################
 section('Other conferences attended')
@@ -225,7 +254,7 @@ attended('http://www.math.virginia.edu/TopologyConf/',
 'December 15--19, 2004')
 
 ################################################################
-section('Seminar talks')
+section('Local seminar talks')
 
 proseminar = 'Algebraic Topology Proseminar'
 farb_and_friends = 'Farb and Friends Student Seminar'
@@ -234,6 +263,14 @@ eminar = 'Shmuel\'s Student Seminar'
 pizza_seminar = 'Pizza Seminar'
 osu_ggt_seminar = 'OSU Geometric Group Theory Seminar'
 osu_topology_seminar = 'OSU Topology Seminar'
+
+local_talk('Numeric methods in topology',
+osu_topology_seminar,
+'November 13, 2012')
+
+local_talk('$\mathcal B$-bounded finiteness',
+osu_topology_seminar,
+'February 15, 2011')
 
 local_talk('$\mathcal B$-bounded finiteness',
 osu_topology_seminar,
@@ -344,6 +381,11 @@ math_table,'December 12, 2000')
 #\newcommand{\service}[2]{\subsubsection*{\textbf{#1}\hfill\textbf{#2}}}
 
 section('Professional activities and service')
+
+service('The Ohio State University, Patent Rights Committee', '2013--Present')
+
+service('The Ohio State University, eLearning Committee', '2012--Present')
+flavor('Organized technology enhanced lectures; built \\texttt{mooculus.osu.edu}.')
 
 service('University of Chicago, Directed Reading Program, Committee Member', '2006--2009')
 flavor('Paired undergraduates with graduate student mentors; organized undergraduate talks; designed database-driven website to monitor students\' progress.')
