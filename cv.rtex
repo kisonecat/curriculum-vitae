@@ -14,6 +14,36 @@
 \leavevmode\leaders\hrule depth -3.5pt height 5.5pt\hfill\kern0pt%
 }
 
+%\makeatletter
+%\def\@biblabel#1{}
+%\makeatother
+
+\makeatletter
+\renewcommand\@biblabel[1]{#1} % No brackets for the references
+\renewenvironment{thebibliography}[1]
+     {%\section*{\refname}%
+      \@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}%
+      \list{\@biblabel{}}%{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{}%\@biblabel{#1}}%
+            \leftmargin\labelwidth%
+            \advance\leftmargin20pt% change 20 pt according to your needs
+%            \advance\leftmargin\labelsep%
+            \setlength\itemindent{-20pt}% change using the inverse of the length used before
+            \@openbib@code%
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty%
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy%
+      \clubpenalty4000%
+      \@clubpenalty \clubpenalty%
+      \widowpenalty4000%
+      \sfcode`\.\@m}%
+     {\def\@noitemerr%
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+\renewcommand\newblock{\hskip .11em\@plus.33em\@minus.07em}
+\makeatother
+
 \begin{document}
 
 \newcommand{\mydot}{\,\,\bull\,\,}
@@ -26,7 +56,7 @@
 \hfill
 \parbox[c]{\widest}{The Ohio State University\mydot Department of Mathematics \\
 231 West 18th Ave Columbus, Ohio 43210 \vspace{1ex}\\
-Telephone: (773) 573--5659 \\
+Telephone: (773) 809--5659 \\
 Email: \href{mailto:fowler@math.osu.edu}{\texttt{fowler@math.osu.edu}} \\
 Web: \url{http://www.math.osu.edu/~fowler/}}
 
@@ -110,6 +140,17 @@ end
 
 def service(text,timeperiod)
   text_with_time(text,timeperiod)
+end
+
+def publications()
+  File.open('papers.bib').readlines.each do |line|
+    if line.match( /^@.*\{(.*),/ )
+      puts line
+      mputs("\\nocite{#{$1}}")
+    end
+  end
+  mputs('\bibliography{papers}{}')
+  mputs('\bibliographystyle{plainyr-rev}')
 end
 
 load('cv.rb')

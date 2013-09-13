@@ -1,13 +1,3 @@
-<div id="sidecolumn">
-  <div class="messageBox">
-    <a href="cv.pdf">
-    <img src="cv.png" width="100%"/>
-    <div class="caption">Download a PDF version of my CV.</div></a>
-  </div>
-</div>
-
-<div id="content">
-
 <h2>Curriculum Vitae</h2>
 
 <%
@@ -18,7 +8,7 @@ end
 
 class String
   def clean
-    self.gsub(/\\textit\{([^\}]+)\}/, '<i>\1</i>').gsub( '--', '&ndash;' ).gsub( '---', '&mdash;' ).gsub('$\mathcal B$', '<i>B</i>' ).gsub('$L^2$', 'L<sup>2</sup>' ).gsub('\\geq', '&ge;').gsub('$\\alpha$', '&alpha;' ).gsub( /\$([^$])\$/, '<i>\1</i>' ).gsub( /\$([^$]+)\$/, '\1' ).gsub('~','&nbsp;').gsub( '\\\\', '<br/>' ).gsub(/\\mathbb\{([^\}]+)\}/, '<b>\1</b>').gsub( '^n', '<sup><i>n</i></sup>' ).gsub( '\\\'e', '&eacute;' )
+    self.gsub(/\\textit\{([^\}]+)\}/, '<i>\1</i>').gsub( '--', '&ndash;' ).gsub( '---', '&mdash;' ).gsub('$\mathcal B$', '<i>B</i>' ).gsub('$L^2$', 'L<sup>2</sup>' ).gsub('\\geq', '&ge;').gsub('$\\alpha$', '&alpha;' ).gsub( /\$([^$])\$/, '<i>\1</i>' ).gsub( /\$([^$]+)\$/, '\1' ).gsub('~','&nbsp;').gsub( '\\\\', '<br/>' ).gsub(/\\mathbb\{([^\}]+)\}/, '<b>\1</b>').gsub( '^n', '<sup><i>n</i></sup>' ).gsub( '\\\'e', '&eacute;' ).gsub( "''", '&rdquo;' ).gsub( "``", '&ldquo;' ).gsub( '\#', '#' )
   end
 end
 
@@ -81,9 +71,21 @@ def service(text,timeperiod)
   text_with_time(text,timeperiod)
 end
 
+require 'rubygems'
+require 'nokogiri'
+
+def publications()
+  `bibtex2html -d -r papers.bib`
+  doc = Nokogiri::HTML(File.open('papers.html'))
+  (doc/'.bibtexnumber').remove
+  (doc/'p').remove
+  items = (doc/'.bibtexitem').collect{ |x| '<p class="bibliography-item">' + x.inner_html.gsub( /\n/, ' ' ).gsub( /\[[^\]]*\]/, '' ).strip + '</p>' }
+  for item in items
+    mputs(item)
+  end
+end
+
 load('cv.rb')
 %>
 <%= $result %>
-
-</div>
 
