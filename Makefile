@@ -6,10 +6,10 @@ all: cv.pdf index.html
 	pdflatex $<
 	pdflatex $<	
 
-cv.tex: cv.rtex cv.rb
+cv.tex: cv.rtex cv.rb papers.bib
 	ruby -e "require 'erb'; f = File.open( \"cv.tex\", 'w' ); f.puts ERB.new( File.read( \"cv.rtex\" ), nil, '>' ).result(binding); f.close"
 
-index.html: index.rhtml cv.rb 
+index.html: index.rhtml cv.rb papers.bib
 	ruby -e "require 'erb'; f = File.open( \"index.html\", 'w' ); f.puts ERB.new( File.read( \"index.rhtml\" ), nil, '>' ).result(binding); f.close"
 
 %.png: %.pdf
