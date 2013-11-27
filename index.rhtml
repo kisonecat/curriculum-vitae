@@ -8,7 +8,7 @@ end
 
 class String
   def clean
-    self.gsub(/\\textit\{([^\}]+)\}/, '<i>\1</i>').gsub( '--', '&ndash;' ).gsub( '---', '&mdash;' ).gsub('$\mathcal B$', '<i>B</i>' ).gsub('$L^2$', 'L<sup>2</sup>' ).gsub('\\geq', '&ge;').gsub('$\\alpha$', '&alpha;' ).gsub( /\$([^$])\$/, '<i>\1</i>' ).gsub( /\$([^$]+)\$/, '\1' ).gsub('~','&nbsp;').gsub( '\\\\', '<br/>' ).gsub(/\\mathbb\{([^\}]+)\}/, '<b>\1</b>').gsub( '^n', '<sup><i>n</i></sup>' ).gsub( '\\\'e', '&eacute;' ).gsub( "''", '&rdquo;' ).gsub( "``", '&ldquo;' ).gsub( '\#', '#' )
+    self.gsub(/\\textit\{([^\}]+)\}/, '<i>\1</i>').gsub( '--', '&ndash;' ).gsub( '---', '&mdash;' ).gsub('$\mathcal B$', '<i>B</i>' ).gsub('$L^2$', 'L<sup>2</sup>' ).gsub('\\geq', '&ge;').gsub('$\\alpha$', '&alpha;' ).gsub( /\$([^$])\$/, '<i>\1</i>' ).gsub( /\$([^$]+)\$/, '\1' ).gsub('~','&nbsp;').gsub( '\\\\', '<br/>' ).gsub(/\\mathbb\{([^\}]+)\}/, '<b>\1</b>').gsub( '^n', '<sup><i>n</i></sup>' ).gsub( '\\\'e', '&eacute;' ).gsub( "''", '&rdquo;' ).gsub( "``", '&ldquo;' ).gsub( '\#', '#' ).gsub( '\$', '$' )
   end
 end
 
@@ -77,6 +77,17 @@ require 'nokogiri'
 def publications()
   `bibtex2html -d -r papers.bib`
   doc = Nokogiri::HTML(File.open('papers.html'))
+  (doc/'.bibtexnumber').remove
+  (doc/'p').remove
+  items = (doc/'.bibtexitem').collect{ |x| '<p class="bibliography-item">' + x.inner_html.gsub( /\n/, ' ' ).gsub( /\[[^\]]*\]/, '' ).strip + '</p>' }
+  for item in items
+    mputs(item)
+  end
+end
+
+def other_publications()
+  `bibtex2html -d -r other-papers.bib`
+  doc = Nokogiri::HTML(File.open('other-papers.html'))
   (doc/'.bibtexnumber').remove
   (doc/'p').remove
   items = (doc/'.bibtexitem').collect{ |x| '<p class="bibliography-item">' + x.inner_html.gsub( /\n/, ' ' ).gsub( /\[[^\]]*\]/, '' ).strip + '</p>' }

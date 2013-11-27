@@ -2,7 +2,8 @@ all: cv.pdf index.html
 
 %.pdf: %.tex
 	pdflatex $<
-	bibtex $(patsubst %.tex,%,$<)
+	bibtex papers
+	bibtex other-papers
 	pdflatex $<
 	pdflatex $<	
 
@@ -24,5 +25,10 @@ clean:
 
 install: cv.pdf cv.png index.html
 	cp index.html ~/homepage/views/cv/cv.html
+	cp papers.bib ~/homepage/research/papers.bib
 	cp cv.pdf ~/homepage/public/pdf/cv.pdf
 	cp cv.png ~/homepage/public/images/cv.png
+
+commit:
+	cd ~/homepage && git add views/cv/cv.html && git add research/papers.bib && git add public/pdf/cv.pdf && git add public/images/cv.png && git commit -m "Updated curriculum vitae" && git push
+

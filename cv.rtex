@@ -4,6 +4,8 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 
+\usepackage{multibbl}
+
 \usepackage[pdftitle={Jim Fowler - Curriculum Vitae},pdfauthor={Jim Fowler},colorlinks=false]{hyperref} 
 \usepackage[left=2cm,top=2cm,right=2cm,nohead,nofoot]{geometry}
 \pagestyle{empty}
@@ -46,9 +48,14 @@
 
 \begin{document}
 
+\newbibliography{papers}
+\bibliographystyle{papers}{plainyr-rev}
+\newbibliography{other-papers}
+\bibliographystyle{other-papers}{plainyr-rev}
+
 \newcommand{\mydot}{\,\,\bull\,\,}
 
-\noindent\parbox[c]{2.5in}{{\Huge\textbf{\textsf{Jim Fowler}}} \\
+\noindent\parbox[c]{2.5in}{{\huge\textbf{\textsf{Jim Fowler}}} \\
 {\textsf{Curriculum Vitae}}}
 \newlength{\widest}
 \def\bull{\vrule height 1ex width .5ex depth -.5ex }
@@ -146,11 +153,20 @@ def publications()
   File.open('papers.bib').readlines.each do |line|
     if line.match( /^@.*\{(.*),/ )
       puts line
-      mputs("\\nocite{#{$1}}")
+      mputs("\\nocite{papers}{#{$1}}")
     end
   end
-  mputs('\bibliography{papers}{}')
-  mputs('\bibliographystyle{plainyr-rev}')
+  mputs('\bibliography{papers}{papers}{}')
+end
+
+def other_publications()
+  File.open('other-papers.bib').readlines.each do |line|
+    if line.match( /^@.*\{(.*),/ )
+      puts line
+      mputs("\\nocite{other-papers}{#{$1}}")
+    end
+  end
+  mputs('\bibliography{other-papers}{other-papers}{}')
 end
 
 load('cv.rb')

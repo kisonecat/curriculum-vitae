@@ -25,17 +25,21 @@ section('Employment')
 teaching('The Ohio State University', 'Program Manager', '2013')
 
 flavor('Mathematics 2568: Linear Algebra. \\\\' +
-link('https://www.coursera.org/course/sequence','Calculus Two MOOC on Coursera.')
+link('https://www.coursera.org/course/sequence','Calculus Two MOOC on Coursera (23k student enrollments).')
 )
 
 teaching('The Ohio State University', 'Lecturer', '2012--2013')
 
-flavor(link('https://www.coursera.org/course/calc1','Calculus One MOOC on Coursera') + ' (82k student enrollments).\\\\' +
-link('https://itunes.apple.com/us/course/calculus-one/id660718824','iTunesU Calculus One') + ' (ranked \#1 in Summer 2013; 33k subscribers). \\\\' +
+flavor(link('https://www.coursera.org/course/calc1','Calculus One MOOC on Coursera') + ' (87k student enrollments).\\\\' +
+link('https://itunes.apple.com/us/course/calculus-one/id660718824','iTunesU Calculus One') + ' (ranked \#1 in Summer 2013; 37k subscribers). \\\\' +
 'Mathematics 1151: Calculus I. \\\\' +
 'Mathematics 1161: Accelerated Calculus I. \\\\' +
 'Mathematics 1181: Honors Calculus I.'
 )
+
+teaching('The Ohio State University', 'Ross Mathematics Program', 'Summer 2010--2013')
+
+flavor('Ran a number theory recitation for high school students; taught a piecewise-linear topology course for undergraduate and high school students.')
 
 teaching('The Ohio State University', 'Zassenhaus Assistant Professor', '2009--2012')
 
@@ -48,10 +52,6 @@ flavor('Mathematics 151: Calculus and Analytic Geometry I. \\\\' +
 'Mathematics 758: Algebraic Topology: Cohomology \\\\' + 
 'Mathematics 765: Smooth Manifolds'
 )
-
-teaching('The Ohio State University', 'Ross Mathematics Program', 'Summer 2010--2013')
-
-flavor('Ran a number theory recitation for high school students; taught a piecewise-linear topology course for undergraduate and high school students.')
 
 teaching('University of Chicago',link('http://www.math.uchicago.edu/~drp/','Directed Reading Program') + ', Mentor', '2004--2009')
 
@@ -106,7 +106,10 @@ flavor('Graded homework and ran weekly recitation sessions for multivariable cal
 ################################################################
 section('Awards, Fellowships, Grants')
 
+award(link('http://www.crestron.com/about/awards/summum_bonum_awards/','Crestron Summum Bonum Award for Excellence in Teaching'), 'March 2014')
+
 award(link('http://www.nsf.gov/funding/pgm_summ.jsp?pims_id=5741','NSF Grant DUE--1245433'), '2013--2015')
+flavor('\$180k for building online textbooks.')
 
 award(link('http://digitalunion.osu.edu/2013/04/10/innovate-2013-the-results-are-in/','``Steal My Idea\'\' Presentation Winner'), 'March 27, 2013')
 
@@ -140,6 +143,11 @@ section('Publications')
 publications()
 
 ################################################################
+section('Other Papers')
+
+other_publications()
+
+################################################################
 section('Talks')
 
 osu_topology_seminar = 'OSU Topology Seminar'
@@ -155,6 +163,11 @@ quantum_topology_seminar = 'OSU Quantum Topology Group'
 
 #\conferencetalk{\href{http://www.msri.org/calendar/workshops/WorkshopInfo/469/show_workshop}%
 
+conference_talk('Reaching Online Learners: Being Smart Isn\'t Enough',
+'SXSWedu',
+'http://sxswedu.com/conference/sessions',
+'Austin, Texas','March 3--6, 2014')
+
 conference_talk('Turbocharging Our MOOCs with Mooculus',
 'EDUCAUSE',
 'http://www.educause.edu/annual-conference/2013/turbocharging-our-moocs-mooculus',
@@ -164,6 +177,11 @@ conference_talk('Plenary lecture on Desargues\' theorem',
 'Undergraduate Mathematics Symposium',
 'http://www.math.uic.edu/ums/',
 'University of Illinois at Chicago','October 5, 2013')
+
+conference_talk('E-Learning and the MOOCS at OSU',
+'OSURA',
+'http://hr.osu.edu/osura/',
+'Columbus, Ohio','September 26, 2013')
 
 local_talk('Hyperbolic knots and their volumes',
 quantum_topology_seminar,
@@ -181,12 +199,17 @@ conference_talk('Manifolds realizing rational homotopy types',
 conference_talk('Rational projective planes',
 'Spring Topology and Dynamics Conference',
 'http://www.matem.unam.mx/STDC2012/',
-'Universidad Nacional Autonoma de M\\\'xico','March 22--24, 2012')
+'Universidad Nacional Autonoma de M\\\'exico','March 22--24, 2012')
 
 conference_talk('Poincar\\\'e duality groups',
 'Stratified Spaces: Joining Analysis, Topology and Geometry',
 'http://www.mfo.de/occasion/1150',
 'Mathematisches Forschungsinstitut Oberwolfach','December 11--17, 2011')
+
+conference_talk('Remarks on rational homology manifolds',
+'Conference in Geometric Group Theory and related topics',
+'http://www.math.osu.edu/~math-indira/lastweek.html',
+'The Ohio State University','May 30--June 3, 2011')
 
 conference_talk('Weighted algebraic topology',
 'Geometrical methods in high-dimensional topology',
@@ -332,6 +355,11 @@ math_table,'December 12, 2000')
 ################################################################
 section('Other conferences attended')
 
+attended('http://wiki.sagemath.org/education5',
+'Sage Education Days 5',
+'University of Washington',
+'June 19--21, 2013')
+
 attended('http://mypage.iu.edu/~qkhan/conference/',
 'Workshop on High Dimensional Topology',
 'University of Notre Dame',
@@ -426,13 +454,9 @@ section('Professional activities and service')
 
 service('The Ohio State University, Patent Rights Committee', '2013--Present')
 
-service('Ohio Board of Regents, Ohio Textbook Affordability Summit' + ', Faculty Panelist','September 27, 2013')
+service('The Ohio State University, Data Analysis Hiring Committee', '2013--Present')
 
-service('National Science Foundation, ' + link('http://www.ingeniousmathstat.org/','INGenIOuS') + ', ' + link('http://www.ingeniousmathstat.org/pdfs/INGenIOuS-Technology-and-MOOCs.pdf','Faculty Panelist'), 'May 30, 2013')
-
-service('The Ohio State University, ' + link('http://digitalfirst.osu.edu/innovate2013/sessions-list/16','Innovate Conference') + ', MOOC Panelist','March 26, 2013')
-
-service('The Ohio State University, ' + link('http://ucat.osu.edu/participate/events/expanding-the-student-learning-experience-capitalize-on-your-time-together-hyflex-and-flipped-models','University Center for the Advancement of Teaching') + ', Faculty Panelist','February 20, 2013')
+service('The Ohio State University, ' + link('http://www.math.osu.edu/~math-indira/SGGT.html','Special Year in Geometry and Topology') + ', Proceedings Co-editor', '2013--Present')
 
 service('The Ohio State University, ' + link('https://steamfactory.osu.edu/','STEAM Factory') + ', Founding Director, Core Committee', '2012--Present')
 
@@ -440,6 +464,14 @@ service('The Ohio State University, eLearning Committee', '2012--Present')
 flavor('Organized technology enhanced lectures and built ' + link('https://mooculus.osu.edu/','mooculus.osu.edu') + '.')
 
 service(link('http://www.math.osu.edu/~fowler.291/topology/','The Ohio State University, Topology Seminar Co-Coordinator'), '2010--Present')
+
+service('Ohio Board of Regents, Ohio Textbook Affordability Summit' + ', Faculty Panelist','September 27, 2013')
+
+service('National Science Foundation, ' + link('http://www.ingeniousmathstat.org/','INGenIOuS') + ', ' + link('http://www.ingeniousmathstat.org/pdfs/INGenIOuS-Technology-and-MOOCs.pdf','Faculty Panelist'), 'May 30, 2013')
+
+service('The Ohio State University, ' + link('http://digitalfirst.osu.edu/innovate2013/sessions-list/16','Innovate Conference') + ', MOOC Panelist','March 26, 2013')
+
+service('The Ohio State University, ' + link('http://ucat.osu.edu/participate/events/expanding-the-student-learning-experience-capitalize-on-your-time-together-hyflex-and-flipped-models','University Center for the Advancement of Teaching') + ', Faculty Panelist','February 20, 2013')
 
 service('The Ohio State University, ' + link('http://www.math.osu.edu/~math-indira/SGGT.html','Special Year in Geometry and Topology') + ', Graduate Student Seminar Organizer', '2010--2011')
 
