@@ -1,3 +1,4 @@
+# coding: utf-8
 #I think in the professional activities you should put the steam
 #factory thing. I also feel like you should be putting some mention of
 #your supremacy at the MOOC, being number one on itunes, listed on
@@ -20,12 +21,20 @@ school('Harvard University', 'Cambridge, Massachusetts','1999--2003')
 degree('A.B. in Mathematics, \textit{summa cum laude}, June 2003.\\\\ Junior Phi Beta Kappa.')
 
 ################################################################
-section('Employment')
+section('Employment and Teaching')
 
-teaching('The Ohio State University', 'Program Manager', '2013')
+teaching('The Ohio State University', 'Assistant Professor', '2014--')
+
+flavor('Mathematics 2162.02: Accelerated Calculus II for Honors Engineers')
+flavor('Mathematics 5801: General Topology and Knot Theory')
+flavor('Mathematics 2153: Calculus 3')
+flavor('Mathematics 2568: Linear Algebra.')
+
+teaching('The Ohio State University', 'Program Manager', '2013--2014')
 
 flavor('Mathematics 2568: Linear Algebra. \\\\' +
-link('https://www.coursera.org/course/sequence','Calculus Two MOOC on Coursera (23k student enrollments).')
+link('https://www.coursera.org/course/sequence','Calculus Two MOOC on Coursera (23k student enrollments).') + '\\\\' +
+link('https://www.coursera.org/course/m2o2c2','Multivariable calculus MOOC on Coursera (11k student enrollments).')
 )
 
 teaching('The Ohio State University', 'Lecturer', '2012--2013')
@@ -37,9 +46,9 @@ link('https://itunes.apple.com/us/course/calculus-one/id660718824','iTunesU Calc
 'Mathematics 1181: Honors Calculus I.'
 )
 
-teaching('The Ohio State University', 'Ross Mathematics Program', 'Summer 2010--2013')
+teaching('The Ohio State University', 'Ross Mathematics Program', 'Summer 2010--')
 
-flavor('Ran a number theory recitation for high school students; taught a piecewise-linear topology course for undergraduate and high school students.')
+flavor('Taught the number theory course; ran a number theory recitation for high school students; taught a piecewise-linear topology course for undergraduate and high school students.')
 
 teaching('The Ohio State University', 'Zassenhaus Assistant Professor', '2009--2012')
 
@@ -106,10 +115,22 @@ flavor('Graded homework and ran weekly recitation sessions for multivariable cal
 ################################################################
 section('Awards, Fellowships, Grants')
 
+#\item \$95k from the Office of Distance Education and eLearning along with Enrollment Services \& Undergraduate Education for the open calculus project.  \textt{Signed February 2015.}
+#\item \$8k matching funds for an Ohio State ``Affordable Learning Open Impact Grant.''  \textit{Awarded December 2015.}                                                                                                                     
+
+# shouldn't I include an ALX thing on here too?
+
+award(link('http://www.nsf.gov/awardsearch/showAward?AWD_ID=1505246','NSF Grant DUE--1505246'), '2015--2018')
+flavor('\$248k for creating and curating linear algebra materials.')
+
 award(link('http://www.crestron.com/about/awards/summum_bonum_awards/','Crestron Summum Bonum Award for Excellence in Teaching'), 'March 2014')
 
-award(link('http://www.nsf.gov/funding/pgm_summ.jsp?pims_id=5741','NSF Grant DUE--1245433'), '2013--2015')
+award(link('http://www.nsf.gov/funding/pgm_summ.jsp?pims_id=5741','NSF Grant DUE--1245433'), '2013--2016')
 flavor('\$180k for building online textbooks.')
+
+award(link('http://odee.osu.edu/odee-grants/pd-grant-application','ODEE, eLearning Professional Development Grant'), 'September 5, 2013')
+
+award(link('http://outreachgrants.osu.edu/','The STEAM Factory, OSU Outreach and Engagement Impact Grant'), '2013')
 
 award(link('http://digitalunion.osu.edu/2013/04/10/innovate-2013-the-results-are-in/','``Steal My Idea\'\' Presentation Winner'), 'March 27, 2013')
 
@@ -163,10 +184,241 @@ quantum_topology_seminar = 'OSU Quantum Topology Group'
 
 #\conferencetalk{\href{http://www.msri.org/calendar/workshops/WorkshopInfo/469/show_workshop}%
 
+conference_talk('STEAM-powered mathematics',
+'Idea Day',
+'https://uaideaday-2018.firebaseapp.com/home',
+'Upper Arlington High School','February 9, 2018')
+
+conference_talk('The STEAM Factory: building a community of engaged academics',
+'Community Engagement Conference',
+'https://steamfactory.osu.edu/events/community-engagement-conference',
+'Ohio State University','January 25, 2018')
+
+
+conference_talk('Linear actions of $\mathbb{Z}/p \times \mathbb{Z}/p$ on $S^n \times S^n$',
+'AMS Contributed Paper Session on Topology and Geometry',
+'http://jointmathematicsmeetings.org/meetings/national/jmm2018/2197_progfull.html',
+'Joint Mathematics Meeting','January 12, 2018')
+
+
+conference_talk('Using CuratedCourses to match OER to other OER.',
+'MAA Session on The Advancement of Open Educational Resources',
+'http://jointmathematicsmeetings.org/meetings/national/jmm2018/2197_progfull.html',
+'Joint Mathematics Meeting','January 12, 2018')
+
+conference_talk('Using Ximera to build online interactive math activities',
+'SIGMAA on Mathematics Instruction Using the WEB (WEB SIGMAA) Guest Lecture',
+'http://jointmathematicsmeetings.org/meetings/national/jmm2018/2197_progfull.html',
+'Joint Mathematics Meeting','January 12, 2018')
+
+conference_talk('Open Resources for the Mathematics Curriculum',
+'Poster Session: Projects Supported by the NSF Division of Undergraduate Education',
+'http://jointmathematicsmeetings.org/meetings/national/jmm2018/2197_progfull.html',
+'Joint Mathematics Meeting','January 11, 2018')
+
+
+conference_talk('The Calculus Knowledge Assessment: an open-source instrument for measuring learning gains in calculus courses',
+'Session on the Scholarship of Teaching and Learning in Collegiate Mathematics',
+'http://jointmathematicsmeetings.org/meetings/national/jmm2018/2197_progfull.html',
+'Joint Mathematics Meeting','January 10, 2018')
+
+conference_talk('Flipping your Mathematics Course using Open Educational Resources',
+'Minicourse',
+'http://jointmathematicsmeetings.org/meetings/national/jmm2018/2197_progfull.html',
+'Joint Mathematics Meeting','January 10--12, 2018')
+
+local_talk('Ongoing calculus reforms in the mathematics department',
+'Research Initiatives on Student Progress, Ohio State University',
+'December 19, 2017')
+
+conference_talk('Using Ximera to build online interactive math activities',
+'Canadian Math Society, Winter 2017 Meeting, Digital Assets in Math Eduation and Outreach',
+'https://cms.math.ca/Events/winter17/abs/uda#jf',
+'University of Waterloo','December 10, 2017')
+
+conference_talk('Talking Points',
+'Ohio Math Initiative',
+'https://www.ohiohighered.org/sites/ohiohighered.org/files/uploads/math/Ohio%20%20Mathematics%20Chairs%20%26%20Leads%20Network%20Meeting%20Agenda%20%28November%203%2C%202017%29.pdf',
+'Ohio State University','November 3, 2017')
+
+conference_talk('Communications Strategy',
+'External Advisory Board',
+'',
+'Ohio State University','October 26, 2017')
+
+conference_talk('Ohio Math Initiative and its math pathways',
+'Engineering faculty focus group',
+'',
+'Ohio Department of Higher Education','October 2, 2017')
+
+
+local_talk('word2vec: representing English words as vectors',
+'OSU Radical Pi',
+'October 18, 2017')
+
+conference_talk('Folding paper and other math stories',
+'Columbus Science Pub',
+'https://steamfactory.osu.edu/events/columbus-science-pub-folding-paper-and-other-math-stories-dr.-jim-fowler',
+'Backstage Bistro','September 7, 2017')
+
+conference_talk('CoCalc and SageMath in service of Ximera',
+'Sage Days: Opening Workshop for a Year of Coding Sprints',
+'https://www.ima.umn.edu/2017-2018.2/W8.21-25.17#schedule',
+'University of Minnesota','August 23, 2017')
+
+
+# erdos-pitch?
+
+conference_talk('Ximera: Collaboratively teaching calculus with online tools',
+'Ohio PKAL',
+'https://www.aacu.org/pkal/regional/ohio/2017-resources',
+'The University of Findlay','May 20, 2017')
+
+
+local_talk('Ximera','Collaboration and Commercialization Summit organized by the Ohio State College of Arts and Sciences','May 8, 2017')
+
+conference_talk('Multiple interventions for success in calculus',
+'Colloquium',
+'https://www.wright.edu/sites/www.wright.edu/files/uploads/2017/Apr/event/Abstract%20Fowler%2004212017.pdf',
+'Wright State University','April 21, 2017')
+
+conference_talk('Calculus and OMI Update',
+'External Advisory Board',
+'',
+'Ohio State University','April 20, 2017')
+
+conference_talk('What is Random?',
+'COSI After Dark',
+'https://github.com/kisonecat/what-is-random',
+'Columbus, Ohio','April 6, 2017')
+
+# organized by Hannah Alpert
+local_talk('Overview of 3-manifold topology','Reading seminar on Agol, Kahn, Markovic, Wise','March 3, 2017')
+
+# this was at Ohio State though
+conference_talk('Ohio Math Initiative and its math pathways',
+'Business Cluster Faculty Panel',
+'',
+'Ohio Department of Higher Education','Febuary 7, 2017')
+
+conference_talk('Calculus Re-design at Ohio State University',
+'Ohio Mathematics Chairs/Leads Network Meeting',
+'',
+'Ohio State University','January 20, 2017')
+
+conference_talk('Mystery in Mathematics: Diffie-Hellman Key Exchange',
+'Creative Mornings',
+'https://creativemornings.com/talks/jim-fowler/1',
+'SparkSpace Columbus','January 13, 2017')
+
+
+conference_talk('Find, Review, Promote: CuratedCourses aligns OER to the course syllabus.',
+'Session on The Advancement of Open Educational Resources',
+'http://jointmathematicsmeetings.org/meetings/national/jmm2017/2180_program_saturday.html',
+'Joint Mathematics Meeting','January 7, 2017')
+
+conference_talk('Flipping your Linear Algebra Course using Open Educational Resources'
+'Minicourse',
+'https://jointmathematicsmeetings.org/meetings/national/jmm2017/2180_progfull.html',
+'Joint Mathematics Meeting','January 4--6, 2017')
+
+conference_talk('Ximera: Collaboratively teaching calculus with online tools',
+'Colloquium',
+'',
+'Colorado State University','December 2, 2016')
+
+conference_talk('Linear actions of $\mathbb{Z}/p \times \mathbb{Z}/p$ on $S^n \times S^n$',
+'Rocky Mountain Algebraic Combinatorics Seminar',
+'',
+'Colorado State University','December 2, 2016')
+
+conference_talk('State of Online Teaching of College Level Mathematics in Ohio',
+'MAA Section Meeting',
+'http://ohiomaafall2016.blogspot.com/',
+'College of Wooster','October 28--29, 2016')
+
+conference_talk('Ximera: open source texts for the open web',
+'Committee on the Advancement of the Learning of Calculus 2',
+'http://math.umn.edu/conferences/calculus-innovation-2016/',
+'University of Minnesota','October 14, 2016')
+
+conference_talk('Calculus Redesign at Ohio State',
+'External Advisory Board',
+'',
+'Ohio State University','September 30, 2016')
+
+conference_talk('Collaboratively Teaching Calculus with Online Tools',
+'Keynote',
+'https://u.osu.edu/ecots2016/agenda/',
+'eCOTS Regional Conference','May 20, 2016')
+
+conference_talk("Ohio\'s Gateway Mathematics Courses",
+'Bridges to Success Workshop',
+'https://www.ohiohighered.org/B2S',
+'Ohio Department of Higher Education, Sharonville Convention Center','April 20, 2016')
+
+conference_talk('Open and active calculus interventions at Ohio State',
+'Gateway to Mathematical Sciences: Lectures on Instruction',
+'https://prime.natsci.msu.edu/news-and-events/news/gateway-to-mathematical-sciences-lectures-on-instruction/',
+'Michigan State University','February 23, 2016')
+
+conference_talk('Discussion of Active Learning in Calculus Courses',
+'Ohio Mathematics Chairs/Leads Network Meeting',
+'https://www.ohiohighered.org/sites/ohiohighered.org/files/uploads/transfer/news/2016/OATN-News_jan2016_FINAL.pdf',
+'Ohio State University','January 22, 2016')
+
+conference_talk('An Introduction to Ximera',
+'Precalculus and Calculus Innovation Workshop',
+'http://math.umn.edu/conferences/calculus-innovation/',
+'Northwestern University','November 13--14, 2015')
+
+conference_talk('Ximera: Collaboratively Develop Interactive Online Content',
+'Ohio MAA Section CONSACT Workshop',
+'http://sections.maa.org/ohio/',
+'Capital University','October 23--24, 2015')
+
+conference_talk('Use Ximera to collaborate on open and interactive texts',
+'Unizin Innovation Summit',
+'http://unizin.org/2015/10/unizin-innovation-summit-a-summary/',
+'Grapevine, Texas','October 8--9 2015')
+
+local_talk('Projective Planes','Minnesota State University, Mankato','October 2, 2015')
+
+conference_talk('What\'s in it for the Professor?  A discussion on instructor impact.',
+'Coursera Partners Conference',
+'https://conference.coursera.org/',
+'Newport Beach, California','March 2015')
+
+local_talk('High-dimensional unknotting, Part 1',
+'Invitations to Mathematics',
+'December 3, 2014')
+
+local_talk('High-dimensional unknotting, Part 2',
+'Invitations to Mathematics',
+'December 8, 2014')
+
+local_talk("Shor\'s algorithm",
+quantum_topology_seminar,
+'November 18, 2014')
+
+conference_talk('Rational projective planes',
+'IUPUI Modern Analysis and Geometry Seminar',
+'http://math.iupui.edu/events/tba-66',
+'Indianapolis, Indiana','November 11, 2014')
+
+conference_talk('Aspherical manifolds that cannot be triangulated',
+'Midwest Topology Seminar',
+'http://www.iupui.edu/~mtopsem/',
+'Indianapolis, Indiana','April 19, 2014')
+
 conference_talk('Reaching Online Learners: Being Smart Isn\'t Enough',
 'SXSWedu',
 'http://sxswedu.com/conference/sessions',
 'Austin, Texas','March 3--6, 2014')
+
+local_talk('Computing in topology and student learning',
+'Job Talk',
+'January 28, 2014')
 
 conference_talk('Turbocharging Our MOOCs with Mooculus',
 'EDUCAUSE',
@@ -355,6 +607,27 @@ math_table,'December 12, 2000')
 ################################################################
 section('Other conferences attended')
 
+attended('knowledgeworks.org/future-learning',
+'Making Sense of the Future of Learning',
+'KnowledgeWorks',
+'May 24--25, 2016')
+
+
+attended('http://sites.baylor.edu/topology-conference/',
+'Spring Topology and Dynamics Conference',
+'Baylor University',
+'March 10--13, 2016')
+
+attended('http://personal.bgsu.edu/~xiex/STDC2015.html',
+'Spring Topology and Dynamics Conference',
+'Bowling Green State University',
+'May 14--16, 2015')
+
+attended('http://www.tpsemath.org/chicago2015',
+'Transforming Post-Secondary Education in Mathematics',
+'University of Chicago',
+'September 19--20, 2015')
+
 attended('http://wiki.sagemath.org/education5',
 'Sage Education Days 5',
 'University of Washington',
@@ -452,9 +725,32 @@ attended('http://www.math.virginia.edu/TopologyConf/',
 
 section('Professional activities and service')
 
-service('The Ohio State University, Patent Rights Committee', '2013--Present')
+service('Spring Topology and Dynamics Conference, Steering Commitee', '2016--2018')
 
-service('The Ohio State University, Data Analysis Hiring Committee', '2013--Present')
+service('Spring Topology and Dynamics Conference, Geometric Topology special session organizer, Baylor University', 'March 10--13, 2016')
+
+service('Spring Topology and Dynamics Conference, Geometric Topology special session organizer, Bowling Green', 'May 14--16, 2015')
+
+service('Ohio Mathematics Initiative, Subgroup 3: Communications Co-chair', '2015--Present')
+
+service('Ohio Mathematics Initiative, Subgroup 3: Communications', '2014--Present')
+
+service('The Ohio State University, Committee on Distance Education, Libraries, Information Technology', '2014--Present')
+
+# when did this end exactly?
+service('The Ohio State University, Distance Education Steering Committee', '2014--Spring 2015')
+
+service('The Ohio State University, Innovate Conference Advisory Committee', 'Autumn 2014--Spring 2015')
+
+service('The Ohio State University, ODEE Impact Grant review committee', 'Autumn 2014')
+
+service('The Ohio State University, New Media in the Classroom', 'Autumn 2014')
+
+service('The Ohio State University, Intellectual Property, Patents, Copyright Senate Committee Chairperson', 'August 2015--June 2016')
+
+service('The Ohio State University, Intellectual Property, Patents, Copyright Senate Committee', '2013--Present')
+
+service('The Ohio State University, Data Analysis Hiring Committee', '2013')
 
 service('The Ohio State University, ' + link('http://www.math.osu.edu/~math-indira/SGGT.html','Special Year in Geometry and Topology') + ', Proceedings Co-editor', '2013--Present')
 
