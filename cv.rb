@@ -1,12 +1,14 @@
 # coding: utf-8
-#I think in the professional activities you should put the steam
-#factory thing. I also feel like you should be putting some mention of
-#your supremacy at the MOOC, being number one on itunes, listed on
-#blogs. I just dont believe you haven't gotten any awards since
-#college. You didn't get any teaching award at uchicago? You also
-#have't listed your publictations, does this not go on the CV? Can't
-#you list all the panels you are particpating on for professional
-#activity?
+
+# I think in the professional activities you should put the steam
+# factory thing. I also feel like you should be putting some mention
+# of your supremacy at the MOOC, being number one on itunes, listed on
+# blogs. I just dont believe you haven't gotten any awards since
+# college. You didn't get any teaching award at uchicago? You also
+# have't listed your publictations, does this not go on the CV?
+
+# Can't you list all the panels you are particpating on for
+# professional activity?
 
 ################################################################
 section('Education')
@@ -23,12 +25,15 @@ degree('A.B. in Mathematics, \textit{summa cum laude}, June 2003.\\\\ Junior Phi
 ################################################################
 section('Employment and Teaching')
 
-teaching('The Ohio State University', 'Assistant Professor', '2014--')
+teaching('The Ohio State University', 'Assistant Professor', '2014--Present')
 
+flavor('Mathematics 5520H: Honors Linear Algebra and Differential Equations')
 flavor('Mathematics 2162.02: Accelerated Calculus II for Honors Engineers')
 flavor('Mathematics 5801: General Topology and Knot Theory')
 flavor('Mathematics 2153: Calculus 3')
 flavor('Mathematics 2568: Linear Algebra.')
+
+teaching('The Ohio State University', 'Ross Mathematics Program', 'Summer 2010--Present')
 
 teaching('The Ohio State University', 'Program Manager', '2013--2014')
 
@@ -45,8 +50,6 @@ link('https://itunes.apple.com/us/course/calculus-one/id660718824','iTunesU Calc
 'Mathematics 1161: Accelerated Calculus I. \\\\' +
 'Mathematics 1181: Honors Calculus I.'
 )
-
-teaching('The Ohio State University', 'Ross Mathematics Program', 'Summer 2010--')
 
 flavor('Taught the number theory course; ran a number theory recitation for high school students; taught a piecewise-linear topology course for undergraduate and high school students.')
 
@@ -115,13 +118,21 @@ flavor('Graded homework and ran weekly recitation sessions for multivariable cal
 ################################################################
 section('Awards, Fellowships, Grants')
 
-#\item \$95k from the Office of Distance Education and eLearning along with Enrollment Services \& Undergraduate Education for the open calculus project.  \textt{Signed February 2015.}
-#\item \$8k matching funds for an Ohio State ``Affordable Learning Open Impact Grant.''  \textit{Awarded December 2015.}                                                                                                                     
+award(link('https://www.youtube.com/user/kisonecat/about','Four million views on YouTube'), 'May 2019')
+flavor('My calculus videos have been viewed more than 4 million times.')
 
-# shouldn't I include an ALX thing on here too?
+award(link('http://www.aplu.org/projects-and-initiatives/stem-education/seminal/about-seminal/','Building a Buckeye calculus community (SEMINAL)'), 'February 2018') # --Aug 2020')
+flavor('\$90k to sustain success in implementing active learning in undergraduate mathematics classes ')
+
+award(link('https://affordablelearning.ohiolink.edu/grantgroupcohort2/calculus1','Ohio Open Ed Collaborative, Team Lead, Calculus 1 and 2'),'June 2018--July 2019')
+flavor('Support to make Ximera resources useful to instructors at other schools')
 
 award(link('http://www.nsf.gov/awardsearch/showAward?AWD_ID=1505246','NSF Grant DUE--1505246'), '2015--2018')
 flavor('\$248k for creating and curating linear algebra materials.')
+
+#\item \$8k matching funds for an Ohio State ``Affordable Learning Open Impact Grant.''  \textit{Awarded December 2015.}                                                                        
+
+#\item \$95k from the Office of Distance Education and eLearning along with Enrollment Services \& Undergraduate Education for the open calculus project.  \textt{Signed February 2015.}
 
 award(link('http://www.crestron.com/about/awards/summum_bonum_awards/','Crestron Summum Bonum Award for Excellence in Teaching'), 'March 2014')
 
@@ -169,7 +180,7 @@ section('Other Papers')
 other_publications()
 
 ################################################################
-section('Talks')
+section('Talks and Presentations')
 
 osu_topology_seminar = 'OSU Topology Seminar'
 proseminar = 'Algebraic Topology Proseminar'
@@ -184,10 +195,73 @@ quantum_topology_seminar = 'OSU Quantum Topology Group'
 
 #\conferencetalk{\href{http://www.msri.org/calendar/workshops/WorkshopInfo/469/show_workshop}%
 
+# colloquium at wittenberg
+
+local_talk('CAT(0) Square Complexes',
+'Wittenberg University, Mathematics Department Colloquium',
+'April 22, 2019')
+
+# Abstract: This interactive talk provides a combinatorial shortcut to
+# discovering some hyperbolic geometry.  Through a series of handouts,
+# we'll consider what happens when you glue squares together with five
+# squares meeting at each vertex, and then we'll work through some
+# calculations together.  What do the angles in a triangle sum to?  Do
+# "parallel" lines stay a bounded distance apart?  What do straight
+# lines even look like?  What do circles look like?  How does enclosed
+# area relate to the length of the enclosing arc?  Alyssa M. Hoofnagle
+# <hoofnaglea@wittenberg.edu> (February 08) (recent replied) -Monday
+# April 22, 3:40-4:30 pm
+
+local_talk('Webinar on Open Educational Resources in Mathematics',
+'Ohio Mathematics Initiative, Subgroup 3',
+'April 10, 2019')
+
+conference_talk('Maximizing Student Outcomes in Flipped Classrooms',
+'Project NExT Workshop on Flipped Classroom',
+'https://jointmathematicsmeetings.org/meetings/national/jmm2019/2217_projn',
+'Joint Mathematics Meeting','January 19, 2019')
+
+conference_talk('Open Resources for the Mathematics Curriculum',
+'MAA Poster Session: Projects Supported bythe NSF Division of Undergraduate Education',
+'https://jointmathematicsmeetings.org/meetings/national/jmm2019/1145_baltimore_prog.pdf',
+'Joint Mathematics Meeting','January 17, 2019')
+
+local_talk('Putting worksheets on the web with Ximera',
+'Math Colloquium, Kent State University',
+'November 28, 2018')
+
+local_talk('Creating open educational resources as if they were open-source software',
+'Reimagining Math Education, Stevens Institute of Technology',
+'November 2, 2018')
+
+local_talk('Calculus Redesign',
+'Strong Start to Finish Kickoff, Greater Columbus Convention Center',
+'October 5, 2018')
+
+local_talk('Mathematics as collaborative storytelling',
+'Mount Leadership Summit, Ohio State University',
+'September 23, 2018')
+
+local_talk('Mathematics as collaborative storytelling',
+'Mount Leadership Summit, Ohio State University',
+'September 23, 2018')
+
+local_talk('Ximera Imaginarium Presentation',
+           'Innovate, Ohio State University',
+           'May 11, 2018')
+
+local_talk('Ongoing calculus reforms in the mathematics department',
+'Math Colloquium, Denison University',
+'February 21, 2018')
+
 conference_talk('STEAM-powered mathematics',
 'Idea Day',
 'https://uaideaday-2018.firebaseapp.com/home',
 'Upper Arlington High School','February 9, 2018')
+
+local_talk('Ongoing calculus reforms in the mathematics department',
+'Center for Life Science Education, Graduate Student Seminar, Ohio State University',
+'February 8, 2018')
 
 conference_talk('The STEAM Factory: building a community of engaged academics',
 'Community Engagement Conference',
@@ -216,7 +290,6 @@ conference_talk('Open Resources for the Mathematics Curriculum',
 'http://jointmathematicsmeetings.org/meetings/national/jmm2018/2197_progfull.html',
 'Joint Mathematics Meeting','January 11, 2018')
 
-
 conference_talk('The Calculus Knowledge Assessment: an open-source instrument for measuring learning gains in calculus courses',
 'Session on the Scholarship of Teaching and Learning in Collegiate Mathematics',
 'http://jointmathematicsmeetings.org/meetings/national/jmm2018/2197_progfull.html',
@@ -233,12 +306,13 @@ local_talk('Ongoing calculus reforms in the mathematics department',
 
 conference_talk('Using Ximera to build online interactive math activities',
 'Canadian Math Society, Winter 2017 Meeting, Digital Assets in Math Eduation and Outreach',
-'https://cms.math.ca/Events/winter17/abs/uda#jf',
+'https://cms.math.ca/Events/winter17/abs/uda',
 'University of Waterloo','December 10, 2017')
 
 conference_talk('Talking Points',
-'Ohio Math Initiative',
-'https://www.ohiohighered.org/sites/ohiohighered.org/files/uploads/math/Ohio%20%20Mathematics%20Chairs%20%26%20Leads%20Network%20Meeting%20Agenda%20%28November%203%2C%202017%29.pdf',
+                'Ohio Math Initiative',
+                'https://www.ohiohighered.org/math/meetings',
+#'https://www.ohiohighered.org/sites/ohiohighered.org/files/uploads/math/Ohio%20%20Mathematics%20Chairs%20%26%20Leads%20Network%20Meeting%20Agenda%20%28November%203%2C%202017%29.pdf',
 'Ohio State University','November 3, 2017')
 
 conference_talk('Communications Strategy',
@@ -263,7 +337,7 @@ conference_talk('Folding paper and other math stories',
 
 conference_talk('CoCalc and SageMath in service of Ximera',
 'Sage Days: Opening Workshop for a Year of Coding Sprints',
-'https://www.ima.umn.edu/2017-2018.2/W8.21-25.17#schedule',
+'https://www.ima.umn.edu/2017-2018.2/W8.21-25.17',
 'University of Minnesota','August 23, 2017')
 
 
@@ -279,7 +353,7 @@ local_talk('Ximera','Collaboration and Commercialization Summit organized by the
 
 conference_talk('Multiple interventions for success in calculus',
 'Colloquium',
-'https://www.wright.edu/sites/www.wright.edu/files/uploads/2017/Apr/event/Abstract%20Fowler%2004212017.pdf',
+'https://www.wright.edu/sites/www.wright.edu/files/uploads/2017/Apr/event/Abstract Fowler 04212017.pdf',
 'Wright State University','April 21, 2017')
 
 conference_talk('Calculus and OMI Update',
@@ -317,7 +391,7 @@ conference_talk('Find, Review, Promote: CuratedCourses aligns OER to the course 
 'http://jointmathematicsmeetings.org/meetings/national/jmm2017/2180_program_saturday.html',
 'Joint Mathematics Meeting','January 7, 2017')
 
-conference_talk('Flipping your Linear Algebra Course using Open Educational Resources'
+conference_talk('Flipping your Linear Algebra Course using Open Educational Resources',
 'Minicourse',
 'https://jointmathematicsmeetings.org/meetings/national/jmm2017/2180_progfull.html',
 'Joint Mathematics Meeting','January 4--6, 2017')
@@ -406,6 +480,11 @@ conference_talk('Rational projective planes',
 'http://math.iupui.edu/events/tba-66',
 'Indianapolis, Indiana','November 11, 2014')
 
+conference_talk('Humanity of Calculus',
+'TEDx Columbus',
+'https://www.youtube.com/watch?v=zOhwlYO9QNA',
+'Riffe Center, Columbus, Ohio','November 7, 2014')
+
 conference_talk('Aspherical manifolds that cannot be triangulated',
 'Midwest Topology Seminar',
 'http://www.iupui.edu/~mtopsem/',
@@ -484,7 +563,6 @@ conference_talk('$\mathcal B$-bounded finiteness',
 local_talk('$\mathcal B$-bounded finiteness',
 'University of Michigan',
 'March 31, 2011')
-
 
 local_talk('$\mathcal B$-bounded finiteness',
 osu_topology_seminar,
@@ -607,6 +685,11 @@ math_table,'December 12, 2000')
 ################################################################
 section('Other conferences attended')
 
+attended('http://affordablelearning.ohiolink.edu/blog/the-ohio-oer-grant-summit-kickoff-event-thursday-october-19',
+'Ohio OER Grant Summit',
+'North Central State College',
+'October 19, 2017')
+
 attended('knowledgeworks.org/future-learning',
 'Making Sense of the Future of Learning',
 'KnowledgeWorks',
@@ -701,31 +784,21 @@ attended('http://www.math.virginia.edu/TopologyConf/',
 
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-#\begin{thebibliography}{1}
-#\bibitem{}
-#C.~Adams, A.~Colestock, J.~Fowler, W.~Gillam, and E.~Katerman.
-#\newblock Cleanliness of geodesics in hyperbolic 3-manifolds.
-#\newblock {\em Pacific J. Math.}, 213(2):201--211, 2004.
-#
-#\bibitem{}
-#C.~Adams, A.~Colestock, J.~Fowler, W.~Gillam, and E.~Katerman.
-#\newblock Cusp size bounds from singular surfaces in hyperbolic 3-manifolds.
-#\newblock {\em Trans. Amer. Math. Soc.}, 358(2):727--741 (electronic), 2006.
-#
-#\bibitem{}
-#Jeremy Brandman, James Fowler, Brian Lins, Ilya Spitkovsky, and Nahum Zobin.
-#\newblock Convex hulls of {C}oxeter groups.
-#\newblock In {\em Function spaces, interpolation theory and related topics
-#  (Lund, 2000)}, pages 213--240. de Gruyter, Berlin, 2002.
-#\end{thebibliography}
-#
 #\section*{Professional activities and service}
 #
 #\newcommand{\service}[2]{\subsubsection*{\textbf{#1}\hfill\textbf{#2}}}
 
 section('Professional activities and service')
 
-service('Spring Topology and Dynamics Conference, Steering Commitee', '2016--2018')
+service(link('https://aimath.org/workshops/upcoming/interacttextbook/','Organize American Institute of Mathematics workshop on interactive assessments in open source textbooks'), 'December 9--13, 2019')
+
+service('The Ohio State University, ' + link('https://steamfactory.osu.edu/','STEAM Factory') + ', Founding Director, Executive Director', '2012--Present')
+
+service('Spring Topology and Dynamics Conference, Steering Commitee', '2016--Present')
+
+service('The Ohio State University, Intellectual Property, Patents, and Copyrights Committee, Chairperson', 'August 2018--June 2019')
+
+service('The Ohio State University, Committee on Distance Education, Libraries, Information Technology, Chairperson', 'August 2017--June 2018')
 
 service('Spring Topology and Dynamics Conference, Geometric Topology special session organizer, Baylor University', 'March 10--13, 2016')
 
@@ -752,12 +825,20 @@ service('The Ohio State University, Intellectual Property, Patents, Copyright Se
 
 service('The Ohio State University, Data Analysis Hiring Committee', '2013')
 
-service('The Ohio State University, ' + link('http://www.math.osu.edu/~math-indira/SGGT.html','Special Year in Geometry and Topology') + ', Proceedings Co-editor', '2013--Present')
-
-service('The Ohio State University, ' + link('https://steamfactory.osu.edu/','STEAM Factory') + ', Founding Director, Core Committee', '2012--Present')
+service('The Ohio State University, ' + link('http://www.math.osu.edu/~math-indira/SGGT.html','Special Year in Geometry and Topology') + ', Proceedings Co-editor', '2013--2017')
 
 service('The Ohio State University, eLearning Committee', '2012--Present')
 flavor('Organized technology enhanced lectures and built ' + link('https://mooculus.osu.edu/','mooculus.osu.edu') + '.')
+
+#STEAM Panel at Wizard World Comic Con – July 30, 2016 STEAM Factory
+#member Paul M. Sutter (Visiting Postdoctoral Scholar, Department of
+#Astrophysics) hosted a panel at the Wizard World Comic Con on "The
+#science behind the comics." The panel discussed the plausibility of
+#various superheroes, the economic impact of all-powerful fights, and
+#the cultural connection to comics over the decades! The panel also
+#included fellow STEAM members Robert Pyatt, Lauren Jones, and Jim
+#Fowler.
+
 
 service(link('http://www.math.osu.edu/~fowler.291/topology/','The Ohio State University, Topology Seminar Co-Coordinator'), '2010--Present')
 
